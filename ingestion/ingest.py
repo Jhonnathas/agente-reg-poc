@@ -1,7 +1,11 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 loader = PyPDFLoader("data/PORTARIA Vacina.pdf")
 
@@ -14,7 +18,7 @@ splitter = RecursiveCharacterTextSplitter(
 
 chunks = splitter.split_documents(docs)
 
-embeddings = OpenAIEmbeddings()
+embeddings = OllamaEmbeddings(model="llama3")
 
 vectorstore = FAISS.from_documents(chunks, embeddings)
 

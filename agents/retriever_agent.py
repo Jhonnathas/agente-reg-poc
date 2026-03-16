@@ -1,7 +1,7 @@
 from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
 
-embeddings = OpenAIEmbeddings()
+embeddings = OllamaEmbeddings(model="llama3")
 
 vectorstore = FAISS.load_local(
     "vectorstore",
