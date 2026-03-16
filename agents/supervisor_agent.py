@@ -1,6 +1,6 @@
 from agents.retriever_agent import retrieve
 from agents.verifier_agent import verify_evidence
-from agents.writer_agent import generate_answer
+from .writer_agent import generate_answer
 
 def ask(question):
 
