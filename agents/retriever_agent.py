@@ -13,6 +13,6 @@ retriever = vectorstore.as_retriever(search_kwargs={"k":3})
 
 def retrieve(question):
 
-    docs = retriever.get_relevant_documents(question)
+    docs = retriever.invoke(question)
 
     return docs

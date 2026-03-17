@@ -7,7 +7,7 @@ import os
 
 load_dotenv()
 
-loader = PyPDFLoader("data/PORTARIA Vacina.pdf")
+loader = PyPDFLoader("data/PORTARIAVacina.pdf")
 
 docs = loader.load()
 

@@ -1,6 +1,6 @@
-from langchain_openai import ChatOpenAI
+from langchain_community.chat_models import ChatOllama
 
-llm = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatOllama(model="llama3")
 
 def generate_answer(question, docs):
 
