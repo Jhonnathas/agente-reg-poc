@@ -1,6 +1,7 @@
 from langchain_community.chat_models import ChatOllama
 
-llm = ChatOllama(model="llama3")
+
+llm = ChatOllama(model="phi3")
 
 def generate_answer(question, docs):
 
